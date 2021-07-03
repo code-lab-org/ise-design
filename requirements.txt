@@ -1,0 +1,13 @@
+aiofiles
+databases[sqlite]
+fastapi
+fastapi-users[sqlalchemy]
+fastapi-utils
+humanhash3
+numpy
+pandas
+Pillow
+python-dotenv
+python-multipart
+scipy
+sqlalchemy

@@ -1,0 +1,401 @@
+<!doctype html>
+<html lang="en" class="bg-light">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="ISE Digital Designer">
+    <meta name="author" content="Paul T. Grogan, Stevens Institute of Technology">
+    <link rel="icon" href="favicon.ico">
+    <!--<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">-->
+    <title>ISE</title>
+  </head>
+
+<body>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top py-2">
+      <div class="container">
+        <a class="navbar-brand" href="#">ISE</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-nav" aria-controls="navbar-nav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbar-nav">
+          <ul class="nav navbar-nav text-center" id="navbar-tabs" role="tablist">
+            <li class="nav-item">
+              <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home-pane" role="tab" aria-controls="home-pane" aria-selected="true"><i class="fa fa-info-circle"></i> Info</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="design-tab" data-toggle="tab" href="#design-pane" role="tab" aria-controls="design-pane" aria-selected="false"><i class="fa fa-car"></i> Design</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="tradespace-tab" data-toggle="tab" href="#tradespace-pane" role="tab" aria-controls="tradespace-pane" aria-selected="false"><i class="fa fa-table"></i> Tradespace</a>
+            </li>
+            <li class="nav-item ml-5"><a class="nav-link palette-link" download="ISE_Palette.xml"><i class="fa fa-download"></i> Palette</a></li>
+            <li class="nav-item"><a class="nav-link modela-link" download="ModelA.io"><i class="fa fa-download"></i> Model A</a></li>
+          </ul>
+        </div>
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item"><a class="nav-link" id="login-link" data-toggle="modal" data-target="#login-modal" href="#login-modal">Login</a></li>
+          <li class="nav-item"><a class="nav-link" id="logout-link" href="#">Logout <span id="user-name"></span></a></li>
+        </ul>
+      </div>
+    </nav>
+    <main role="main">
+      <div class="container tab-content">
+        <div class="tab-pane fade show active" id="home-pane" role="tabpanel" aria-labelledby="home-tab">
+          <h1 class="my-4">Industrial and Systems Engineering (ISE)</h1>
+          <div class="row">
+            <div class="col-6">
+              <p>This is an interactive module to learn about Industrial and Systems Engineering. By applying digital engineering techniques, help re-design the Model A "Sport" vehicle to improve profitability and efficiency.</p>
+              <h3>You Will Need:</h3>
+              <ul>
+                <li><a href="https://www.bricklink.com/v3/studio/download.page" target="_blank">BrickLink Studio</a> (available for Windows and Mac OS X)</li>
+                <li><a class="palette-link" download="ISE_Palette.xml">Palette</a> of available bricks</li>
+                <li>Today's passcode (provided by the instructor)</li>
+              </ul>
+            </div>
+            <div class="col-3">
+              <figure class="figure">
+                <img src="images/model-a-render.png" class="figure-img img-fluid rounded" alt="rendering of the model a vehicle design">
+                <figcaption class="figure-caption">A rendering of the Model A "Sport" vehicle design</figcaption>
+              </figure>
+            </div>
+            <div class="col-3">
+              <figure class="figure">
+                <img src="images/model-a-bricklink.png" class="figure-img img-fluid rounded" alt="screenshot of the model a vehicle design in bricklink studio">
+                <figcaption class="figure-caption">Editing the Model A "Sport" design in BrickLink Studio</figcaption>
+              </figure>
+            </div>
+          </div>
+          <h2>Getting Started</h2>
+          <p>First, download and install <a href="https://www.bricklink.com/v3/studio/download.page" target="_blank">BrickLink Studio</a>.</p>
+          <p>Next, download the <a class="palette-link" download="ISE_Palette.xml">ISE Palette</a> which lists the available bricks for this activity.</p>
+          <p>Add the parts list palette to BrickLink as follows:
+            <ol>
+              <li>Click on the parts dropdown list (labeled "Master" by default) in BrickLink Studio</li>
+              <li>Select "Config..." from the menu options</li>
+              <li>Click on the "Choose a way to add new palette..." dropdown list and select "Import a wanted list ..."</li>
+              <li>Navigate to your local copy of the ISE_Palette.xml file and select it</li>
+              <li>Click on the parts dropdown list again, and select "ISE_Palette" to display the available bricks</li>
+            </ol>
+          </p>
+          <p>Either start from the <a class="modela-link" download="ModelA.io">Model A</a> template or create your own design. BrickLink Studio uses the .io file format to save designs.</p>
+          <p>Before using the other features on this website, please be sure to Log In using the link in the upper right corner. You can choose any anonymous username; however, please enter the correct passcode for today's activity provided by the instructor.</p>
+          <p>To analyze your design, upload it to the <a class="design-tab-link" href="#design-pane" aria-controls="design-pane">Design Tab</a>. The automated analysis will compute important physical properties, check for eight key requirements, and provide additional information about the sources of cost and value for your design. Beware that orientation is important for some bricks!</p>
+          <p>Each design is assigned a unique identifier with two parts. Part is a randomly-generated code unique to your design station (computer) while another part is a randomly-generated code phrase is unique to the design itself. Write down any interesting design identifiers to revisit the analysis later!</p>
+          <p>Finally, you can search the tradespace of all designs that meet all eight requirements on the <a class="tradespace-tab-link" href="#tradespace-pane" aria-controls="tradespace-pane">Tradespace Tab</a>. Click on the columns to sort by various financial metrics or enter part of a design identifier to search the database. Click on the icons to view the detailed design analysis for any contribution. Use the chart to visualize the cost versus value tradeoff for designs in the table.</p>
+        </div>
+        <div class="tab-pane fade show" id="design-pane" role="tabpanel" aria-labelledby="design-tab">
+          <button type="button" class="btn btn-outline-secondary float-right" data-toggle="modal" data-target="#upload-modal">
+            <i class="fa fa-upload"></i> Upload
+          </button>
+          <h1 class="my-4">Design Analysis</h1>
+          <div id="placeholder" class="p-5 mb-4 text-center bg-light text-muted rounded img-thumbnail"><i class="fas fa-car-side fa-5x"></i></div>
+          <div id="results" class="d-none mb-4">
+            <div class="row my-2">
+              <div class="col-md-4">
+                <figure class="figure w-100">
+                  <img id="thumbnail" class="w-100 p-4 figure-img img-fluid rounded img-thumbnail" alt="">
+                  <figcaption id="thumbnail-caption" class="figure-caption text-center text-monospace"></figcaption>
+                </figure>
+              </div>
+              <div class="col-md-4">
+                <h3>Physical Properties</h3>
+                <div class="container">
+                  <div class="row">
+                    <div class="col-6">Mass</div>
+                    <div class="col-6"><span id="physical-mass"></span></div>
+                  </div>
+                  <div class="row">
+                    <div class="col-6">Volume</div>
+                    <div class="col-6"><span id="physical-volume"></span></div>
+                  </div>
+                  <div class="row">
+                    <div class="col-6">Length (<span data-toggle="tooltip" title="Lengthwise distance between the wheels/tires.">Wheelbase</span>)</div>
+                    <div class="col-6"><span id="physical-length"></span> (<span id="physical-wheelbase"></span>)</div>
+                  </div>
+                  <div class="row">
+                    <div class="col-6">Width (<span data-toggle="tooltip" title="Crosswise distance between the wheels/tires.">Track</span>)</div>
+                    <div class="col-6"><span id="physical-width"></span> (<span id="physical-track"></span>)</div>
+                  </div>
+                  <div class="row">
+                    <div class="col-6">Height</div>
+                    <div class="col-6"><span id="physical-height"></span></div>
+                  </div>
+                  <div class="row">
+                    <div class="col-6">Number Seats</div>
+                    <div class="col-6"><span id="physical-number-seats"></span></div>
+                  </div>
+                  <div class="row">
+                    <div class="col-6">Cargo Volume</div>
+                    <div class="col-6"><span id="physical-cargo-volume"></span></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <h3>Requirements Analysis</h3>
+                <div class="container">
+                  <div class="row">
+                    <div class="col-6"><span data-toggle="tooltip" title="Only use bricks from the provided palette.">Available Bricks</span></div>
+                    <div class="col-6"><i class="fas text-secondary" id="requirement-bricks"></i> <span class="text-secondary" id="requirement-bricks-message"></span></div>
+                  </div>
+                  <div class="row">
+                    <div class="col-6"><span data-toggle="tooltip" title="All bricks must be connected as one component.">Fully-connected</span></div>
+                    <div class="col-6"><i class="fas text-secondary" id="requirement-connected"></i> <span class="text-secondary" id="requirement-connected-message"></span></div>
+                  </div>
+                  <div class="row">
+                    <div class="col-6"><span data-toggle="tooltip" title="One steering wheel facing forward.">Steering Wheel</span></div>
+                    <div class="col-6"><i class="fas text-secondary" id="requirement-steering"></i> <span class="text-secondary" id="requirement-steering-message"></span></div>
+                  </div>
+                  <div class="row">
+                    <div class="col-6"><span data-toggle="tooltip" title="At least one seat facing forward.">Seat</span></div>
+                    <div class="col-6"><i class="fas text-secondary" id="requirement-seat"></i> <span class="text-secondary" id="requirement-seat-message"></span></div>
+                  </div>
+                  <div class="row">
+                    <div class="col-6"><span data-toggle="tooltip" title="At least four forward-rolling tires/wheels on the bottom.">Wheels</span></div>
+                    <div class="col-6"><i class="fas text-secondary" id="requirement-wheels"></i> <span class="text-secondary" id="requirement-wheels-message"></span></div>
+                  </div>
+                  <div class="row">
+                    <div class="col-6"><span data-toggle="tooltip" title="At least two forward-facing headlights on the front.">Headlights</span></div>
+                    <div class="col-6"><i class="fas text-secondary" id="requirement-headlights"></i> <span class="text-secondary" id="requirement-headlights-message"></span></div>
+                  </div>
+                  <div class="row">
+                    <div class="col-6"><span data-toggle="tooltip" title="At least two backward-facing taillights on the back.">Taillights</span></div>
+                    <div class="col-6"><i class="fas text-secondary" id="requirement-taillights"></i> <span class="text-secondary" id="requirement-taillights-message"></span></div>
+                  </div>
+                  <div class="row">
+                    <div class="col-6"><span data-toggle="tooltip" title="At least one backward-facing license plate on the back.">License Plate</span></div>
+                    <div class="col-6"><i class="fas text-secondary" id="requirement-plate"></i> <span class="text-secondary" id="requirement-plate-message"></span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row my-2">
+              <div class="col-md-4">
+                <h3>Cost Analysis</h3>
+                <div class="container text-right">
+                  <div class="row font-weight-bold border-bottom">
+                    <div class="col-9">Category</div>
+                    <div class="col-3">Cost</div>
+                  </div>
+                  <div class="row border-top">
+                    <div class="col-9"><a data-toggle="collapse" href="#cost-materials-collapse" role="button" aria-expanded="false" aria-controls="cost-materials-collapse">Raw Materials</a></div>
+                    <div class="col-3"><span id="cost-materials"></span></div>
+                  </div>
+                  <div class="collapse pl-2" id="cost-materials-collapse"></div>
+                  <div class="row border-top">
+                    <div class="col-9"><a data-toggle="collapse" href="#cost-assembly-collapse" role="button" aria-expanded="false" aria-controls="cost-assembly-collapse">Assembly</a></div>
+                    <div class="col-3"><span id="cost-assembly"></span></div>
+                  </div>
+                  <div class="collapse pl-2" id="cost-assembly-collapse">
+                    <div class='row text-secondary'>
+                      <div class='col-9'>Components Handling</div>
+                      <div class='col-3'><span id="cost-assembly-components"></span></div>
+                    </div>
+                    <div class='row text-secondary'>
+                      <div class='col-9'>System Integration</div>
+                      <div class='col-3'><span id="cost-assembly-integration"></span></div>
+                    </div>
+                  </div>
+                  <div class="row border-top">
+                    <div class="col-9"><a data-toggle="collapse" href="#cost-overhead-collapse" role="button" aria-expanded="false" aria-controls="cost-overhead-collapse">Overhead</a></div>
+                    <div class="col-3"><span id="cost-overhead"></span></div>
+                  </div>
+                  <div class="collapse pl-2" id="cost-overhead-collapse">
+                    <div class='row text-secondary'>
+                      <div class='col-9'>Engineering</div>
+                      <div class='col-3'><span id="cost-overhead-engineering"></span></div>
+                    </div>
+                    <div class='row text-secondary'>
+                      <div class='col-9'>Sales and Marketing</div>
+                      <div class='col-3'><span id="cost-overhead-marketing"></span></div>
+                    </div>
+                    <div class='row text-secondary'>
+                      <div class='col-9'>Facilities and Utilities</div>
+                      <div class='col-3'><span id="cost-overhead-facilities"></span></div>
+                    </div>
+                    <div class='row text-secondary'>
+                      <div class='col-9'>Administration</div>
+                      <div class='col-3'><span id="cost-overhead-administration"></span></div>
+                    </div>
+                  </div>
+                  <div class="row border-top">
+                    <div class="col-9 font-weight-bold">Total</div>
+                    <div class="col-3"><span id="cost-total"></span></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <h3>Market Analysis</h3>
+                <div class="container text-right">
+                  <div class="row font-weight-bold border-bottom">
+                    <div class="col-6">Category</div>
+                    <div class="col-3">Score</div>
+                    <div class="col-3">Weight</div>
+                  </div>
+                  <div class="row border-top">
+                    <div class="col-6"><span data-toggle="tooltip" title="Benefits from seats and a large volume.">Passenger Capacity</span></div>
+                    <div class="col-3"><span id="value-passenger"></span>/100</div>
+                    <div class="col-3">20%</div>
+                  </div>
+                  <div class="row border-top">
+                    <div class="col-6"><span data-toggle="tooltip" title="Benefits from cargo and a large volume.">Cargo Capacity</span></div>
+                    <div class="col-3"><span id="value-cargo"></span>/100</div>
+                    <div class="col-3">20%</div>
+                  </div>
+                  <div class="row border-top">
+                    <div class="col-6"><span data-toggle="tooltip" title="Benefits from light weight and a short wheelbase.">Handling</span></div>
+                    <div class="col-3"><span id="value-handling"></span>/100</div>
+                    <div class="col-3">10%</div>
+                  </div>
+                  <div class="row border-top">
+                    <div class="col-6"><span data-toggle="tooltip" title="Benefits from light weight and a low height.">Acceleration</span></div>
+                    <div class="col-3"><span id="value-acceleration"></span>/100</div>
+                    <div class="col-3">15%</div>
+                  </div>
+                  <div class="row border-top">
+                    <div class="col-6"><span data-toggle="tooltip" title="Benefits from lights, a windshield, and a heavy weight.">Safety</span></div>
+                    <div class="col-3"><span id="value-safety"></span>/100</div>
+                    <div class="col-3">15%</div>
+                  </div>
+                  <div class="row border-top">
+                    <div class="col-6"><span data-toggle="tooltip" title="Benefits from using cool bricks.">Coolness</span></div>
+                    <div class="col-3"><span id="value-coolness"></span>/100</div>
+                    <div class="col-3">20%</div>
+                  </div>
+                  <div class="row border-top">
+                    <div class="col-6">Overall Score</div>
+                    <div class="col-3"><span id="value-total"></span>/100</div>
+                  </div>
+                  <div class="row border-top">
+                    <div class="col-9 font-weight-bold">Estimated Market Price</div>
+                    <div class="col-3"><span id="value-price"></span></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <h3>Analysis Utilities</h3>
+                <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#dsm-modal">
+                  <i class="fas fa-th"></i> DSM
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="tradespace-pane" role="tabpanel" aria-labelledby="tradespace-tab">
+          <button id="refresh-tradespace" type="button" class="btn btn-outline-secondary float-right">
+            <i class="fa fa-sync"></i> Refresh
+          </button>
+          <h1 class="my-4">Tradespace Analysis</h1>
+          <div class="nav nav-tabs my-4" id="tradespace-tabs" role="tablist">
+            <a class="nav-item nav-link active" id="tradespace-table-tab" data-toggle="tab" href="#tradespace-table-pane" role="tab" aria-controls="tradespace-table-pane" aria-selected="true">Table</a>
+            <a class="nav-item nav-link" id="tradespace-chart-tab" data-toggle="tab" href="#tradespace-chart-pane" role="tab" aria-controls="tradespace-chart-pane" aria-selected="false">Chart</a>
+          </div>
+          <div class="tab-content my-4">
+            <div class="tab-pane fade show active" id="tradespace-table-pane" role="tabpanel" aria-labelledby="tradespace-table-tab">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="tradespace-valid">
+                <label class="form-check-label" for="tradespace-valid">
+                  Limit to valid designs
+                </label>
+              </div>
+              <div class="table-responsive">
+                <table id="tradespace-table" class="table table-sm table-bordered table-hover text-center w-100">
+                  <thead>
+                    <tr>
+                      <th>Thumbnail</th>
+                      <th>Uploaded</th>
+                      <th>Designer</th>
+                      <th>Model</th>
+                      <th>Valid</th>
+                      <th>Cost</th>
+                      <th>Value</th>
+                      <th>Profit</th>
+                      <th><abbr title="Return on Investment">ROI</abbr></th>
+                    </tr>
+                  </thead>
+                  <tbody></tbody>
+                </table>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="tradespace-chart-pane" role="tabpanel" aria-labelledby="tradespace-chart-tab">
+              <canvas id="tradespace-chart"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="site-footer bg-light text-center border-top border-dark">
+      <p><small class="text-muted">&copy; 2021 Paul T. Grogan, Collective Design Laboratory</small></p>
+    </footer>
+  </body>
+
+  <div class="modal" role="dialog" id="login-modal" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body">
+          <form id="login-form">
+            <div class="form-group">
+              <label for="login-username">Email</label>
+              <input type="text" id="login-email" name="username" class="form-control" placeholder="Email address" required autofocus>
+              <div><span class="text-danger" id="login-email-message"></span></div>
+            </div>
+            <div class="form-group">
+              <label for="login-password">Password</label>
+              <input type="password" id="login-passcode" name="password" class="form-control" placeholder="Provided by the instructor" required>
+              <div><span class="text-danger" id="login-passcode-message"></span></div>
+            </div>
+            <button class="btn btn-primary" type="submit">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" role="dialog" id="upload-modal" aria-labelledby="upload-modal-label" aria-hidden="true" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="upload-modal-label">Upload Design</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form id="upload-design-form" enctype="multipart/form-data">
+            <div class="custom-file">
+              <input type="file" name="file" accept=".io" class="custom-file-input" id="design-file">
+              <label class="custom-file-label btn btn-primary" for="design-file">Choose file</label>
+            </div>
+            <div><span class="text-danger" id="upload-message"></span></div>
+          </form>
+          <div id="upload-progress" class="progress-bar w-0" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" role="dialog" id="dsm-modal" aria-labelledby="dsm-modal-label" aria-hidden="true" tabindex="-1">
+    <div class="modal-dialog modal-xl">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="dsm-modal-label">Design Structure Matrix (DSM)*</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body" style="overflow-x: auto">
+          <p>The design structure matrix (DSM) describes the connectivity between pieces. A black cell (labeled "1" for accessibility) indicates the row component is physically connected to the column component.</p>
+          <div class="table-responsive"><table class="table table-sm table-bordered table-hover" id="dsm"></table></div>
+          <p>*Approximate DSM is based on connectivity of brick bounding boxes. Some non-convex pieces such as bumpers and axels give misleading results.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</html>
