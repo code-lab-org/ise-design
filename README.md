@@ -80,3 +80,7 @@ docker volume create ise_data
 docker run --name ise-design --restart always --volume ise_data:/data --env "ISE_DATABASE_URL=sqlite:////data/data.db" --env "ISE_SECRET=secret" --env "ISE_ADMIN_EMAIL=admin@example.com" --env "ISE_ADMIN_PASSWORD=admin" --env "ISE_REGISTER_PASSCODE=passcode" code-lab/ise-design
 ```
 The application is available via a web browser at http://localhost.
+
+## Acknowledgement
+
+This material is based upon work supported in part by the National Science Foundation under Grant No. 1943433. Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation.
